@@ -1,11 +1,13 @@
 package com.weatherly.backend.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.weatherly.backend.models.common.Alerts;
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class WeatherAggregate {
     private WeatherCurrent current;
     private WeatherDaily daily;
-    private WeatherlyHourly hourly;
+    private WeatherHourly hourly;
     private Alerts alerts;
 
     public WeatherCurrent getCurrent() {
@@ -24,11 +26,11 @@ public class WeatherAggregate {
         this.daily = daily;
     }
 
-    public WeatherlyHourly getHourly() {
+    public WeatherHourly getHourly() {
         return hourly;
     }
 
-    public void setHourly(WeatherlyHourly hourly) {
+    public void setHourly(WeatherHourly hourly) {
         this.hourly = hourly;
     }
 
