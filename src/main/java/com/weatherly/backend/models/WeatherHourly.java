@@ -4,7 +4,7 @@ import com.weatherly.backend.models.common.Snow;
 
 import java.util.List;
 
-public class WeatherlyHourly {
+public class WeatherHourly {
     private int clouds;
     private double dew_point;
     private long dt;
