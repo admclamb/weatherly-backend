@@ -36,7 +36,7 @@ public class OpenWeatherService {
            return restTemplate.getForObject(url, String.class);
         } catch (Exception e) {
             log.error("Error calling OpenWeather API: {}", e.getMessage());
-            return null; // Consider handling this more gracefully
+            return null;
         }
     }
 
